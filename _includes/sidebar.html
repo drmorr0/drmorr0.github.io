@@ -25,17 +25,18 @@
         <a href="{{ '/' | relative_url }}">{{- site.title -}}</a>
       </div>
       <div class="site-subtitle font-italic">{{- site.tagline -}}</div>
+      <div class="site-about">{{- site.description -}}</div>
     </div>
   </div><!-- #profile-wrapper -->
 
   <ul class="nav flex-column">
     <!-- home -->
-    <li class="nav-item d-flex justify-content-center {% if page.layout == 'home' %}active{% endif %}">
-      <a href="{{ '/' | relative_url }}" class="nav-link d-flex justify-content-center align-items-center w-100">
-        <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i>
-        <span>{{ "HOME" }}</span>
-      </a>
-    </li>
+    <!-- <li class="nav-item d-flex justify-content-center {% if page.layout == 'home' %}active{% endif %}"> -->
+    <!--   <a href="{{ '/' | relative_url }}" class="nav-link d-flex justify-content-center align-items-center w-100"> -->
+    <!--     <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> -->
+    <!--     <span>{{ "HOME" }}</span> -->
+    <!--   </a> -->
+    <!-- </li> -->
     <!-- the real tabs -->
     {% for tab in site.tabs %}
     <li class="nav-item d-flex justify-content-center {% if tab.url == page.url %}active{% endif %}">
