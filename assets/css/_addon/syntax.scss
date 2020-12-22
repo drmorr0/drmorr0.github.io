@@ -87,6 +87,7 @@ div > pre {
     font-size: $code-font-size;
     line-height: 1.4rem;
     word-wrap: normal; /* Fixed Safari overflow-x */
+    max-height: 250px;
   }
   table {
     padding: 0;

@@ -224,7 +224,7 @@ $sidebar-display: "sidebar-display";
 
 #avatar {
   > a {
-    display: block;
+    display: flex;
     width: 6rem;
     height: 6rem;
     border-radius: 50%;
@@ -234,6 +234,9 @@ $sidebar-display: "sidebar-display";
     -webkit-transition: border-color 0.35s ease-in-out;
     -moz-transition: border-color 0.35s ease-in-out;
     transition: border-color 0.35s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
   }
 
   &:hover > a {
@@ -241,8 +244,9 @@ $sidebar-display: "sidebar-display";
   }
 
   img {
-    width: 100%;
-    height: 100%;
+    padding-right: 5px;
+    width: 75%;
+    height: 75%;
     -webkit-transition: transform .5s;
     -moz-transition: transform .5s;
     transition: transform .5s;
@@ -656,10 +660,12 @@ sup {
 .footnotes ol {
   margin-top: 0.5rem;
   > li {
+    font-size: small;
     padding-top: 0.2rem;
     margin-top: -0.2rem;
     > p {
       padding-left: 0.2em;
+      font-size: small;
     }
     &:not(:last-child) {
       margin-bottom: -.8rem;
