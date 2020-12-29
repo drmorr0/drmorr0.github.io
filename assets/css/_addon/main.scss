@@ -893,6 +893,35 @@ div.post-content .table-wrapper {
   }
 }
 
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+details {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-size: small;
+    margin-bottom: 1rem;
+}
+
+details[open] {
+    outline: -webkit-focus-ring-color 1px auto;
+}
+
+summary {
+    outline: none;
+}
+
+details[open] figure {
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+}
+
 /* --- buttons --- */
 .btn-lang {
   border: 1px solid !important;

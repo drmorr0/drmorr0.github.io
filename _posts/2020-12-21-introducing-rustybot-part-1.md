@@ -13,12 +13,15 @@ that it could fly autonomously and do tasks for me, like flying over to the fron
 
 That's doable in a weekend, right?  Right?
 
-<figure>
-  <img src="https://media.giphy.com/media/NaboQwhxK3gMU/giphy.gif"/>
-  <figcaption> This is from The Walking Dead so I can only assume that this dude gets his face violently ripped off
-    right after he says this.
-  </figcaption>
-</figure>
+<details>
+  <summary>click to expand</summary>
+  <figure>
+    <img src="https://media.giphy.com/media/NaboQwhxK3gMU/giphy.gif"/>
+    <figcaption> This is from The Walking Dead so I can only assume that this dude gets his face violently ripped off
+      right after he says this.
+    </figcaption>
+  </figure>
+</details>
 
 So anyways, that's how I found myself building a control system in Rust for a robot that stays on the ground and is not
 powered by batteries that might spontaneously combust. 
@@ -55,10 +58,13 @@ just port them to Rust.  I got the IR sensor array working and the motor drivers
 engineer worth their salt, decided it was time to rewrite the entire project from scratch!  Which brings us to the meat
 of this series of blog posts, embedded asynchronous robotics with Rust!
 
-<figure>
-  <img src="https://media.giphy.com/media/xT5LMCJyj3w0XFPbtS/giphy.gif"/>
-  <figcaption>Why, yes they are, Bob.  Yes, they are.</figcaption>
-</figure>
+<details>
+  <summary>click to expand</summary>
+  <figure>
+    <img src="https://media.giphy.com/media/xT5LMCJyj3w0XFPbtS/giphy.gif"/>
+    <figcaption>Why, yes they are, Bob.  Yes, they are.</figcaption>
+  </figure>
+</details>
 
 ## Embedded asynchronous robotics with Rust
 
@@ -95,10 +101,13 @@ resources out there for that, such as the [async Rust book](https://rust-lang.gi
 "official" way to do async on AVR at the time of writing, so I needed to get my hands dirty a little bit.  First, I
 needed to understand the basics of how Rust does asynchronous programming.  
 
-<figure>
-  <img src="https://media.giphy.com/media/e7i6KJU8jBMvS/giphy.gif">
-  <figcaption>Just so we're all clear, this is <i>not</i> my robot.</figcaption>
-</figure>
+<details>
+  <summary>click to expand</summary>
+  <figure>
+    <img src="https://media.giphy.com/media/e7i6KJU8jBMvS/giphy.gif">
+    <figcaption>Just so we're all clear, this is <i>not</i> my robot.</figcaption>
+  </figure>
+</details>
 
 The core concept for async programming is pretty easy to understand: we've got a bunch of tasks and an executor which is
 responsible for running those tasks, and when a task doesn't have any work to do it yields control back to the executor.
@@ -162,9 +171,12 @@ de-allocates anything and never moves anything around, so we can be sure that th
 
 ### Context?  Context?  Is there a Context in here?
 
-<figure>
-  <img src="https://media.giphy.com/media/Xs2ry2K0ADD7G/giphy.gif"/>
-</figure>
+<details>
+  <summary>click to expand</summary>
+  <figure>
+    <img src="https://media.giphy.com/media/Xs2ry2K0ADD7G/giphy.gif"/>
+  </figure>
+</details>
 
 The last thing I'm going to cover in this post is the second argument to `poll`, which caused me quite a bit of
 confusion.  The [Rust docs](https://doc.rust-lang.org/core/task/struct.Context.html) simply say
@@ -246,10 +258,13 @@ TIMER0_COMPA():  # interrupt
 From here, the executor wakes up and `poll`s all of the waiting futures, and the cycle continues.  Along the way, we'll
 discover at least one more compiler bug before we get everything working!  But we will get there, I promise.
 
-<figure>
-  <img src="/assets/img/posts/2020-12-21/rustybot.gif"/>
-  <figcaption>Just in case you were wondering, this is where we're going.  Next stop: world domination!!!!</figcaption>
-</figure>
+<details>
+  <summary>click to expand</summary>
+  <figure>
+    <img src="/assets/img/posts/2020-12-21/rustybot.gif"/>
+    <figcaption>Just in case you were wondering, this is where we're going.  Next stop: world domination!!!!</figcaption>
+  </figure>
+</details>
 
 Thanks for reading,
 
