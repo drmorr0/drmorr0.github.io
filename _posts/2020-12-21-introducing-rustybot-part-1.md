@@ -5,6 +5,10 @@ date: 2020-12-21 23:30:00-08:00
 tags: [rust, robots]
 ---
 
+> N.B. This is the first part of a series about programming an Arduino robot using Rust's async primitives (Part 1, 
+> [2](https://objectdisoriented.evokewonder.com/posts/introducing-rustybot-part-2/)).  If you just want to skip to the
+> source code, click [here](https://github.com/drmorr0/rustybot).
+
 ## So you want to build a robot?
 
 It all started when I decided I was going to build a quadcopter.  But not just any quadcopter, I was going to get all
@@ -116,7 +120,7 @@ tasks will run (in contrast to threaded multitasking, in which the executor will
 it feels like).  Every language implements this a little bit differently, but in Rust the core primitive is a `Future`;
 a `Future` object has a pretty simple interface[^1]:
 
-```
+```rust
 fn poll(
     mut self: core::pin::Pin<&mut Self>, 
     ctx: &mut core::task::Context,
@@ -231,7 +235,7 @@ pass that along.
 Just for completeness' sake, let me diagram where we're going in the next post.  I'm going to show you how I created an
 executor for AVR, which more-or-less does the following:
 
-```
+```python
 while True:
     for future in futures:
         if future.not_ready:
@@ -248,7 +252,7 @@ passed, the comparator interrupt looks at the future ID stored in the pending fu
 executor so that it can wake the task up and do some more more work (spoiler warning: we have to patch `llvm` to get
 this to produce correct assembly code):
 
-```
+```python
 TIMER0_COMPA():  # interrupt
     for future in waiting_futures:
         if current_time >= future.wake_time:

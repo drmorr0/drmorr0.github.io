@@ -59,7 +59,7 @@ layout: page
     <div class="post-content">
       <p>
         {% include no-linenos.html content=post.content %}
-        {{ post.content | regex_replace: '<details>.*?<\/details>', '' | strip_html | truncate: 500}}
+        {{ post.content | regex_replace: '<details>.*?<\/details>', '' | regex_replace: '<blockquote>.*?<\/blockquote>', '' | strip_html | truncate: 500}}
       </p>
     </div>
 
