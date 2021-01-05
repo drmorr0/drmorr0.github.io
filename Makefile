@@ -8,6 +8,9 @@ local:
 	bundle exec jekyll serve --force-polling
 
 publish: build
-	git --work-tree=_site add --all
-	git --work-tree=_site commit -m "autogen: publish site"
-	git --work-tree=_site push source:master
+	git co master
+	cp -r _site/* .
+	git add --all
+	git commit -m "autogen: publish site"
+	git push origin master
+	git co source
