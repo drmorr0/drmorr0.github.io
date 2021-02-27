@@ -2,19 +2,23 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://objectdisoriented.evokewonder.com/posts/introducing-rustybot-part-1/</loc>
-<lastmod>2021-01-04T23:06:20-08:00</lastmod>
+<lastmod>2021-02-26T23:33:25-08:00</lastmod>
 </url>
 <url>
 <loc>https://objectdisoriented.evokewonder.com/posts/introducing-rustybot-part-2/</loc>
-<lastmod>2021-01-04T23:00:00-08:00</lastmod>
+<lastmod>2021-02-26T23:33:25-08:00</lastmod>
 </url>
 <url>
 <loc>https://objectdisoriented.evokewonder.com/posts/patching-llvm/</loc>
 <lastmod>2021-01-09T19:23:00-08:00</lastmod>
 </url>
 <url>
+<loc>https://objectdisoriented.evokewonder.com/posts/introducing-rustybot-part-3/</loc>
+<lastmod>2021-02-26T23:31:00-08:00</lastmod>
+</url>
+<url>
 <loc>https://objectdisoriented.evokewonder.com/tabs/archives/</loc>
-<lastmod>2021-01-09T19:25:40-08:00</lastmod>
+<lastmod>2021-02-26T23:33:47-08:00</lastmod>
 </url>
 <url>
 <loc>https://objectdisoriented.evokewonder.com/</loc>
