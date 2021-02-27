@@ -6,7 +6,8 @@ tags: [rust, robots]
 ---
 
 > N.B. This is the first part of a series about programming an Arduino robot using Rust's async primitives (Part 1, 
-> [2](https://objectdisoriented.evokewonder.com/posts/introducing-rustybot-part-2/)).  If you just want to skip to the
+> [2](https://objectdisoriented.evokewonder.com/posts/introducing-rustybot-part-2/),
+> [3](https://objectdisoriented.evokewonder.com/posts/introducing-rustybot-part-3/)).  If you just want to skip to the
 > source code, click [here](https://github.com/drmorr0/rustybot).
 
 ## So you want to build a robot?
